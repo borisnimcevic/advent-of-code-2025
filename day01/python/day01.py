@@ -11,8 +11,6 @@ with open("../input1.txt","r") as file:
         if directon=='R':
             for x in range(int(number)):
                 current_position+=1
-                if(current_position==0):
-                    two_counter+=1
                 if(current_position>99):
                     two_counter+=1
                     current_position-=100
@@ -22,19 +20,10 @@ with open("../input1.txt","r") as file:
                 if(current_position==0):
                     two_counter+=1
                 if(current_position<0):
-                    # two_counter+=1
                     current_position+=100
 
         if(current_position==0):
            one_counter+=1
-        
-
-        # print(directon,end="")
-        # print()
-        # print(number,end="")
-        # print()
-        # print(current_position,end="")
-        # print()
 
 print(one_counter)
 print(two_counter)
